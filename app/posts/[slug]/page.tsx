@@ -19,7 +19,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
   return (
     <article className="japanese-paper p-6 rounded-lg">
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+      <h1 className="text-3xl font-bold mb-4 text-gray-800">{post.title}</h1>
       {post.coverImage && (
         <div className="relative w-full h-64 mb-6">
           <Image

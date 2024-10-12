@@ -21,7 +21,7 @@ export default function PostCard({ post }: { post: Post }) {
           <CardTitle>{post.title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground">{post.excerpt}</p>
+          <p className="text-gray-600">{post.excerpt}</p>
         </CardContent>
       </Card>
     </Link>
