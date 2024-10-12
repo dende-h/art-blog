@@ -1,0 +1,42 @@
+---
+title: "はじめての投稿"
+date: "2024-03-14"
+excerpt: "このブログサイトの最初の投稿です。マークダウンの機能を紹介します。"
+coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+---
+
+# はじめての投稿
+
+こんにちは！このブログサイトへようこそ。この投稿では、マークダウンの基本的な機能を紹介します。
+
+## 見出し
+
+マークダウンでは、`#` を使って見出しを作成できます。`#` の数が多いほど、小さな見出しになります。
+
+## 強調
+
+テキストを **太字** や *斜体* にすることができます。
+
+## リスト
+
+### 箇条書きリスト
+
+- 項目1
+- 項目2
+- 項目3
+
+### 番号付きリスト
+
+1. 最初の項目
+2. 2番目の項目
+3. 3番目の項目
+
+## リンク
+
+[外部リンク](https://www.example.com)を作成することもできます。
+
+## 画像
+
+![画像の説明](https://images.unsplash.com/photo-1516546453174-5e1098a4b4af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)
+
+これらは基本的なマークダウンの機能の一部です。このブログサイトでは、これらの機能を使って記事を書くことができます。
