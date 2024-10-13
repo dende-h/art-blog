@@ -21,13 +21,12 @@ export default async function PostPage({ params }: { params: { slug: string } })
     <article className="japanese-paper p-6 rounded-lg">
       <h1 className="text-3xl font-bold mb-4 text-gray-800">{post.title}</h1>
       {post.coverImage && (
-        <div className="relative w-full h-64 mb-6">
+        <div className="relative w-full pt-[56.25%] mb-6"> {/* 16:9 aspect ratio */}
           <Image
             src={post.coverImage}
             alt={post.title}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            fill
+            className="absolute top-0 left-0 rounded-lg object-cover"
           />
         </div>
       )}

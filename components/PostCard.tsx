@@ -7,13 +7,13 @@ export default function PostCard({ post }: { post: Post }) {
   return (
     <Link href={`/posts/${post.slug}`}>
       <Card className="japanese-paper h-full transition-transform hover:scale-105 overflow-hidden">
-        {post.coverImage && (
-          <div className="relative w-full h-48">
+      {post.coverImage && (
+          <div className="relative w-full pt-[56.25%]"> {/* 16:9 aspect ratio */}
             <Image
               src={post.coverImage}
               alt={post.title}
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="absolute top-0 left-0  object-cover"
             />
           </div>
         )}
