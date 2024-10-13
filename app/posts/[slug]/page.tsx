@@ -2,6 +2,7 @@ import { getPostBySlug, getPosts } from '@/lib/posts';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import CommentSection from '@/components/CommentSection';
 import Image from 'next/image';
+import PostNavigation from '@/components/PostNavigation';
 
 export async function generateStaticParams() {
   const posts = await getPosts();
@@ -14,8 +15,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
-    return <div>Post not found</div>;
+    return <div>記事が見つかりません</div>;
   }
+
+  const posts = await getPosts();
+  const currentPostIndex = posts.findIndex(p => p.slug === params.slug);
+  const prevPost = currentPostIndex > 0 ? posts[currentPostIndex - 1] : null;
+  const nextPost = currentPostIndex < posts.length - 1 ? posts[currentPostIndex + 1] : null;
 
   return (
     <article className="japanese-paper p-6 rounded-lg">
@@ -33,6 +39,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <div className="prose prose-invert max-w-none">
         <MDXRemote source={post.content} />
       </div>
+      <PostNavigation prevPost={prevPost} nextPost={nextPost} />
       <CommentSection postSlug={params.slug} />
     </article>
   );
